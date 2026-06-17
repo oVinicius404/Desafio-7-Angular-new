@@ -1,1 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    box-sizing: border-box;
+    height: 100vh;
+}
+
+:root {
+    --cor_margens: #1b357e;
+    --cor_botoes: #1351db;
+    --cor_cinza_claro: #ebedf3;
+}
+

@@ -1,0 +1,9 @@
+# Ignorar dependências do Angular
+**/node_modules/
+**/.angular/
+**/dist/
+
+# Ignorar arquivos do VS Code e do sistema
+.vscode/
+.DS_Store
+Thumbs.db
