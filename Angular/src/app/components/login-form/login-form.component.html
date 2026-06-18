@@ -1,17 +1,17 @@
-<form class="login-forms">
+<form [formGroup]="loginForm" (ngSubmit)="onSubmitLogin()" class="login-forms">
 
     <h2>Boas-vindas</h2>
 
     <div class="usuario-forms">
         <label for="usuario-login" class="usuario-label">Seu Usuário</label>
 
-        <input type="text" class="usuario-input" id="usuario-login" aria-describedby="usuario-help" placeholder="usuário123">
+        <input formControlName="nome" type="text" class="usuario-input" id="usuario-login" aria-describedby="usuario-help, [required]" placeholder="usuário123">
     </div>
 
     <div class="senha-forms">
         <label for="senha-login" class="senha-label">Sua Senha</label>
 
-        <input type="password" class="senha-input" id="senha-login" placeholder="********">
+        <input formControlName="senha" type="password" class="senha-input" id="senha-login" aria-describedby="senha-help, [required]" placeholder="********">
     </div>
 
     <!-- <div class="help-forms">
