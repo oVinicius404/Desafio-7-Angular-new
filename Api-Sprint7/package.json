@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "api.js",
-  "scripts": { 
+  "scripts": {
     "start": "node api.js"
   },
   "repository": {
