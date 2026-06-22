@@ -1,0 +1,11 @@
+.tabela-carros {
+  margin-top: 1%;
+}
+
+.valores-tabela {
+  border: 1px solid var(--cor_cinza_claro);
+}
+
+.info-tabela {
+  padding: 12px;
+}

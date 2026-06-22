@@ -19,7 +19,7 @@ export class LoginFormComponent {
    })
 
    onSubmitLogin() {
-      const  {nome, senha } = this.loginForm.value
+      const  { nome, senha } = this.loginForm.value
 
       if(!this.loginForm.valid || !nome || !senha) {
         alert("Preencha os campos corretamente!")

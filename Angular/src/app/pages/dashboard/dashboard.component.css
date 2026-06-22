@@ -1,0 +1,23 @@
+.dashboard-tudo {
+  display: flex;
+  gap: 12px;
+}
+
+.tabela {
+  padding: 14px;
+  border: 1px solid black;
+  box-shadow: 1px 4px 6px -1px rgba(0, 0, 0, 0.5);
+}
+
+.carro-div {
+  display: flex;
+  width: 100%;
+  max-width: 400px;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+.carro-img {
+  display: flex;
+  width: 100%;
+} 
