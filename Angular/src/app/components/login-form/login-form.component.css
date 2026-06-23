@@ -1,12 +1,36 @@
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-login {
+    display: flex;
+    position: absolute;
+    left: 14.5%;
+    width: 47%;
+    border-radius: 5%;
+}
+
 .login-forms {
     display: flex;
+    background-color: white;
+    position: absolute;
+    right: 20%;
     width: 100%;
     max-width: 400px;
     flex-direction: column;
     box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.2);
-    padding: 20px;
+    padding: 60px;
     border: 1px solid var(--cor_margens);
     border-radius: 10px;
+}
+
+.logo {
+    display: flex;
+    align-self: center;
+    width: 70%;
+    margin-bottom: 15px;
 }
 
 h2 {
@@ -19,7 +43,13 @@ h2 {
     display: flex;
     flex-direction: column;
     margin-bottom: 5%;
+    font-size: larger;
 }
+
+.usuario-label {
+    margin-bottom: 2%;
+}
+
 
 .usuario-input {
     padding: 1.5%;
@@ -33,7 +63,12 @@ h2 {
 .senha-forms {
     display: flex;
     flex-direction: column;
-    margin-bottom: 5%; 
+    margin-bottom: 5%;
+    font-size: larger;
+}
+
+.senha-label {
+    margin-bottom: 2%;
 }
 
 .senha-input {
@@ -41,28 +76,58 @@ h2 {
     border-radius: 5px;
     border: 1.5px solid var(--cor_margens);
     width: 100%;
-    margin-bottom: 5%;
+    margin-bottom: 1%;
 }
 
-.help-forms {
-    margin-bottom: 4%;
+/* ícones do bootstrap ínicio*/
+.input-container {
+  position: relative;
+  width: 100%;
 }
 
-.help-input {
-    margin-right: 1.5%;
+.input-icon {
+  position: absolute;
+  left: 12px;               
+  top: 50%;
+  transform: translateY(-50%); 
+  color: #6c757d;             
+  z-index: 2;                
+  pointer-events: none;        
 }
+
+.usuario-input,
+.senha-input {
+  width: 100%;
+  padding-left: 36px !important; 
+}   
+/* ícones do bootstrap fim*/
 
 .btn-forms {
-    display:flex;
+    display: flex;
     justify-content: start;
 }
 
 .entrar-btn {
     border: 1.5px solid var(--cor_margens);
-    padding: 1.5%;
+    padding: 3%;
     border-radius: 5px;
     background-color: var(--cor_botoes);
     color: white;
     font-size: 16px;
-    width: 60%;
+    width: 65%;
+    font-size: larger;
+    transition: 0.15s;
+    margin-top: 3%;
+    margin-bottom: 5%;
+}
+
+.entrar-btn:hover {
+    background-color: var(--cor_margens);
+    cursor: pointer;
+    transform: scale(1.05);
+    pointer-events: auto !important;
+}
+
+a {
+    font-size: 75%;
 }
