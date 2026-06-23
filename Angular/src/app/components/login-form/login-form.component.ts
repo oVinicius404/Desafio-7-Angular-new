@@ -7,7 +7,8 @@ import { Router } from '@angular/router';
   selector: 'app-login-form',
   imports: [ ReactiveFormsModule],
   templateUrl: './login-form.component.html',
-  styleUrl: './login-form.component.css'
+  styleUrl: './login-form.component.css',
+  host: { 'ngSkipHydration': 'true' }
 })
 export class LoginFormComponent {
   loginService = inject(LoginService)

@@ -6,3 +6,8 @@
     --cor_cinza_claro: #ebedf3;
     --cor_fundo: #0c1f55;
 }
+
+body {
+    background: #ffffff;
+    background: radial-gradient(circle, rgba(255, 255, 255, 1) 64%, rgba(144, 173, 238, 1) 87%, rgba(19, 81, 219, 1) 100%);
+}

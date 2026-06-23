@@ -1,12 +1,47 @@
-<button class="menu-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
-  Menu
-</button>
+<div class="head">
+  <img class="logo" src="img/ford-logo.png" alt="">
+  <button class="menu-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample"
+    aria-controls="offcanvasExample">
+    Para onde quer ir?
+  </button>
+</div>
 
 <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
   <div class="offcanvas-header">
-    <h5 class="offcanvas-title" id="offcanvasExampleLabel">Ford Enter</h5>
+    <h5 class="offcanvas-title" id="offcanvasExampleLabel"><img class="logo-dentro" src="img/ford-96.png" alt=""></h5>
   </div>
   <div class="offcanvas-body">
-    <button class="dashboard-btn" (click)="goToDashboard()">Dashboard</button>
+    <button class="dashboard-btn" (click)="goToDashboard()">Ver carros!</button>
+    <button (click)="Logout()" class="logout-btn">Sair.</button>
   </div>
+  <div class="redes">
+    <p>Redes Sociais</p>
+
+    <div class="social_img">
+      <a target="_blank" href="https://www.facebook.com/FordBrasil/?locale=pt_BR"><img src="img/facebook-50.png"
+          alt="Facebook Logo" class="social_links"></a>
+      <a target="_blank" href="http://youtube.com/@fordbrasil"><img src="img/youtube-squared-50.png" alt="YouTube Logo"
+          class="social_links"></a>
+      <a target="_blank" href="https://www.instagram.com/fordbrasil/"><img src="img/instagram-logo-50.png"
+          alt="Instagram Logo" class="social_links"></a>
+    </div>
+  </div>
+</div>
+
+<div class="carrossel-container">
+
+  <div class="carrossel-trilho" [ngStyle]="{'transform': 'translateX(' + (-indexAtual * 100) + '%)'}">
+
+    <div class="carrossel-item" *ngFor="let img of imagens">
+      <img [src]="img" class="img-login" alt="Slide Ford">
+    </div>
+
+  </div>
+
+  <button type="button" class="btn-nav btn-ant" (click)="anterior()">&#10094;</button>
+  <button type="button" class="btn-nav btn-prox" (click)="proximo()">&#10095;</button>
+</div>
+
+<div class="copyright">
+  <P>&copy; 2026 Ford Brasil | Viva o Novo. Todos os direitos reservados.</P>
 </div>
