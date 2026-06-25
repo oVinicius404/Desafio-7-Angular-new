@@ -71,8 +71,9 @@ body {
     color: var(--cor_margens);
     font-size: 20px;
     width: 80%;
-    height: 8%;
+    height: 10%;
     font-family: "Montserrat", sans-serif;
+    margin-bottom: 4%;
 }
 
 .logout-btn {
