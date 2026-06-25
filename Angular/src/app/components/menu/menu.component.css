@@ -1,15 +1,32 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #0C1F55;
+    background: linear-gradient(0deg, #0c1f55 43%, #1351db 85%);
+}
+
 .head {
     display: flex;
-    justify-content: center;
+    width: 100%;
+    height: 10%;
     align-items: center;
 }
 
 .logo {
     display: flex;
-    position: absolute;
-    left: 2%;
-    bottom: 85%;
+    justify-self: start;
     width: 12%;
+    margin-left: 1%;
+}
+
+.btn-div {
+    width: 73.8%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .menu-btn {
@@ -18,13 +35,26 @@
     border-radius: 7.5px;
     background-color: var(--cor_margens);
     color: white;
-    font-size: 22px;
-    width: 20%;
+    font-size: 20px;
+    width: 15%;
+    height: 70%;
+    font-family: "Montserrat", sans-serif;
+}
+
+.offcanvas-header {
+    display: flex;
+    justify-content: center;
 }
 
 .logo-dentro {
     display: flex;
-    width: 150%;
+    width: 100%;
+}
+
+.offcanvas-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .dashboard-btn {
@@ -37,7 +67,8 @@
     color: var(--cor_margens);
     font-size: 20px;
     width: 80%;
-    margin-bottom: 5%;
+    height: 8%;
+    font-family: "Montserrat", sans-serif;
 }
 
 .logout-btn {
@@ -50,30 +81,36 @@
     color: white;
     font-size: 20px;
     width: 80%;
+    height: 8%;
+    font-family: "Montserrat", sans-serif;
 }
 
 .offcanvas {
-    background: #0C1F55;
-    background: linear-gradient(0deg, rgba(12, 31, 85, 1) 43%, rgba(19, 81, 219, 1) 85%);
+    background: #142d73;
+    background: linear-gradient(0deg, #142d73 19%, #1962ff 100%);
 }
+
 
 .redes {
     display: flex;
-    width: 70%;
-    font-family: "Montserrat", sans-serif;
+    flex-direction: column;
     font-size: 100%;
+    margin-bottom: 5%;
 }
 
 .redes p {
-    width: 70%;
+    font-size: larger;
     text-align: center;
     align-self: center;
     color: white;
+    font-family: "Montserrat", sans-serif;
 }
 
 .social_img {
     display: flex;
     width: 100%;
+    justify-content: center;
+    gap: 3%;
 }
 
 .social_links {
@@ -93,7 +130,7 @@
     max-width: 1200px;
     margin: 0 auto;
     overflow: hidden;
-    margin-top: 9%;
+    margin-top: 6%;
     margin-bottom: 6%;
 }
 
@@ -151,4 +188,5 @@
     font-size: 100%;
     justify-content: center;
     font-family: "Montserrat", sans-serif;
+    color: white;
 }

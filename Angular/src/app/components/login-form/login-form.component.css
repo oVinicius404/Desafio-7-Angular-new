@@ -1,47 +1,66 @@
 body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
     background: #0C1F55;
-    background: linear-gradient(0deg, rgba(12, 31, 85, 1) 43%, rgba(19, 81, 219, 1) 85%);
+    background: linear-gradient(0deg, #0c1f55 43%, #1351db 85%);
 }
 
 .main {
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.img-div {
+    width: 100%;
+    display: flex;
 }
 
 .img-login {
-    display: flex;
-    position: absolute;
-    left: 14.5%;
-    width: 47%;
-    border-radius: 5%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.formulario {
+    width: 100%;
+    max-width: 612px;
 }
 
 .login-forms {
     display: flex;
-    background-color: white;
-    position: absolute;
-    right: 20%;
+    background: #142d73;
+    background: linear-gradient(0deg, #142d73 19%, #1962ff 100%);
     width: 100%;
-    max-width: 400px;
     flex-direction: column;
     box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.2);
     padding: 60px;
-    border: 1px solid var(--cor_margens);
-    border-radius: 10px;
+}
+
+.logo-div {
+    display: flex;
+    height: 20%;
 }
 
 .logo {
     display: flex;
     align-self: center;
-    width: 70%;
-    margin-bottom: 15px;
+    width: 60%;
+    margin-bottom: 20px;
 }
 
 h2 {
     display: flex;
     justify-content: center;
     margin-bottom: 7%;
+    color: white;
+    font-family: "Montserrat", sans-serif;
 }
 
 .usuario-forms {
@@ -53,16 +72,24 @@ h2 {
 
 .usuario-label {
     margin-bottom: 2%;
+    color: white;
+    font-family: "Montserrat", sans-serif;
 }
-
 
 .usuario-input {
     padding: 1.5%;
     border-radius: 5px;
-    border: 1.5px solid var(--cor_margens);
+    border: 2px solid white;
     margin-bottom: 3%;
     width: 100%;
     margin-bottom: 1%;
+    background: local;
+}
+
+.usuario-input::placeholder {
+    color: white;
+    opacity: 0.8;
+    font-family: "Montserrat", sans-serif;
 }
 
 .senha-forms {
@@ -74,37 +101,47 @@ h2 {
 
 .senha-label {
     margin-bottom: 2%;
+    color: white;
+    font-family: "Montserrat", sans-serif;
 }
 
 .senha-input {
     padding: 1.5%;
     border-radius: 5px;
-    border: 1.5px solid var(--cor_margens);
+    border: 2px solid white;
     width: 100%;
     margin-bottom: 1%;
+    background: local;
+}
+
+.senha-input::placeholder {
+    color: white;
+    opacity: 0.8;
+    font-family: "Montserrat", sans-serif;
 }
 
 /* ícones do bootstrap ínicio*/
 .input-container {
-  position: relative;
-  width: 100%;
+    position: relative;
+    width: 100%;
 }
 
 .input-icon {
-  position: absolute;
-  left: 12px;               
-  top: 50%;
-  transform: translateY(-50%); 
-  color: #6c757d;             
-  z-index: 2;                
-  pointer-events: none;        
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    pointer-events: none;
+    color: white;
 }
 
 .usuario-input,
 .senha-input {
-  width: 100%;
-  padding-left: 36px !important; 
-}   
+    width: 100%;
+    padding-left: 36px !important;
+}
+
 /* ícones do bootstrap fim*/
 
 .btn-forms {
@@ -113,7 +150,7 @@ h2 {
 }
 
 .entrar-btn {
-    border: 1.5px solid var(--cor_margens);
+    border: 2px solid var(--cor_margens);
     padding: 3%;
     border-radius: 5px;
     background-color: var(--cor_botoes);
@@ -124,15 +161,22 @@ h2 {
     transition: 0.15s;
     margin-top: 3%;
     margin-bottom: 5%;
+    font-family: "Montserrat", sans-serif;
 }
 
 .entrar-btn:hover {
-    background-color: var(--cor_margens);
     cursor: pointer;
     transform: scale(1.05);
     pointer-events: auto !important;
 }
 
-a {
-    font-size: 75%;
+.dados {
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.dados a {
+    color: #00a2ff;
 }

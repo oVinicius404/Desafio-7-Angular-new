@@ -3,11 +3,3 @@
     padding: 0;
     box-sizing: border-box;
 }
-
-.universal {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}       
