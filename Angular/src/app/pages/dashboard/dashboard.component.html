@@ -1,27 +1,36 @@
-<section class="dashboard-tudo">
-    <div class="tabela">
-        <h2>Veículos</h2>
-        <select (change)="onChangeSelect($event)">
-            @for (v of veiculos; track v.id) {
-                <option value="{{ v.id }}">{{ v.vehicle }}</option>
-            }
-        </select>
-    </div>
+<body>
     
-    <app-card [titulo]="'Total de Vendas'" [valor]="veiculoSelecionado.volumetotal" />
-    <app-card [titulo]="'Conectados'" [valor]="veiculoSelecionado.connected" />
-    <app-card [titulo]="'Upd. Software'" [valor]="veiculoSelecionado.softwareUpdates" />
-</section>
-<section class="carro-div">
-    <img class="carro-img" src="{{ veiculoSelecionado.img }}" alt="">
-</section>
-<section>
-    <app-car-table 
-        [vin]="veiculoSelecionado.vin"
-        [odometro]="vinInfos.odometro"
-        [nivelCombustivel]="vinInfos.nivelCombustivel"
-        [status]="vinInfos.status"
-        [lat]="vinInfos.lat"
-        [long]="vinInfos.long"
-    />
-</section>
+    <section class="dashboard-tudo">
+        <div class="tabela">
+            <div class="veiculos">
+                <h2>Veículos</h2>
+            </div>
+            <div class="seletor">
+                <select (change)="onChangeSelect($event)">
+                    @for (v of veiculos; track v.id) {
+                        <option value="{{ v.id }}">{{ v.vehicle }}</option>
+                    }
+                </select>
+            </div>
+        </div>
+        
+        <app-card [titulo]="'Total de Vendas'" [valor]="veiculoSelecionado.volumetotal" />
+        <app-card [titulo]="'Conectados'" [valor]="veiculoSelecionado.connected" />
+        <app-card [titulo]="'Upd. Software'" [valor]="veiculoSelecionado.softwareUpdates" />
+    </section>
+    <section class="carro-div">
+        <img class="carro-img" src="{{ veiculoSelecionado.img }}" alt="">
+    </section>
+    <section>
+        <app-car-table 
+            [vin]="veiculoSelecionado.vin"
+            [odometro]="vinInfos.odometro"
+            [nivelCombustivel]="vinInfos.nivelCombustivel"
+            [status]="vinInfos.status"
+            [lat]="vinInfos.lat"
+            [long]="vinInfos.long"
+        />
+    </section>
+
+</body>
+

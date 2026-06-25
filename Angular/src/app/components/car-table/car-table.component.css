@@ -1,11 +1,36 @@
-.tabela-carros {
-  margin-top: 1%;
+.tabelinha {
+  width: 100vw;
+  height: 7vh;
+  margin-top: 20px;
 }
 
-.valores-tabela {
-  border: 1px solid var(--cor_cinza_claro);
+.tabela-carros {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead {
+  background-color: var(--cor_margens);
 }
 
 .info-tabela {
-  padding: 12px;
+  color: #ffffff;
+  font-weight: normal;
+  font-size: 18px;
+  padding: 18px 20px;
+  text-align: left;
+}
+
+.info-tabela:first-child {
+  padding-left: 2%;
+}
+
+thead th {
+  border: 1px solid black;
+}
+
+.valores-tabela td {
+  padding: 18px 10px;
+  color: #333333;
+  font-size: 18px;
 }

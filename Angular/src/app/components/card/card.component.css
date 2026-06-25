@@ -1,5 +1,33 @@
 .cards {
-  padding: 14px;
+  justify-content: center;
   border: 1px solid #000000;
   box-shadow: 1px 4px 6px -1px rgba(0, 0, 0, 0.5);
+  background-color: white;
+  width: 20vw;
+  height: 20vh;
+  font-size: larger;
+  font-family: "Montserrat", sans-serif;
+}
+
+.titulo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 40%;
+  background-color: var(--cor_cinza_claro);
+}
+
+.valor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 60%;
+  color: var(--cor_margens);
+}
+
+.valor p {
+  margin-top: 0;
+  margin-bottom: 0;
 }
