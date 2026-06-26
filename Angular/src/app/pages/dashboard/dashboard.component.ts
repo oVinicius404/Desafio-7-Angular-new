@@ -48,7 +48,7 @@ export class DashboardComponent implements OnInit {
             next: (vinInfos) => {
               this.vinInfos = vinInfos
             }
-          })
+          }) 
         }
       }
     })

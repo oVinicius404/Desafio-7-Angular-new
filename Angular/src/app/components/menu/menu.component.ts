@@ -1,7 +1,9 @@
-import { Component, inject, OnInit, OnDestroy } from '@angular/core';
+import { Component, inject, OnInit, OnDestroy, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
 import { NgStyle, NgFor } from '@angular/common';
 import { ReactiveFormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
+
+declare var bootstrap: any;
 
 @Component({
   selector: 'app-menu',
@@ -9,14 +11,17 @@ import { Router } from '@angular/router';
   templateUrl: './menu.component.html',
   styleUrl: './menu.component.css'
 })
-export class MenuComponent implements OnInit, OnDestroy {
-  router = inject(Router)
+export class MenuComponent implements OnInit, OnDestroy, AfterViewInit {
+  router = inject(Router);
+
+  // Captura a referência do modal colocada no HTML (#meuModal)
+  @ViewChild('meuModal') modalElement!: ElementRef;
 
   goToDashboard() {
     this.router.navigate(["/dashboard"])
   }
 
-  Logout() {
+  logout() {
     sessionStorage.clear()
     this.router.navigate([""])
   }
@@ -35,11 +40,16 @@ export class MenuComponent implements OnInit, OnDestroy {
   public indexAtual = 0;
   private idIntervalo: any;
 
-
   ngOnInit(): void {
     this.idIntervalo = setInterval(() => {
       this.proximo();
     }, 3000);
+  }
+
+  // Executa assim que a tela carrega totalmente, abrindo o modal
+  ngAfterViewInit(): void {
+    const modalBootstrap = new bootstrap.Modal(this.modalElement.nativeElement);
+    modalBootstrap.show();
   }
 
   ngOnDestroy(): void {

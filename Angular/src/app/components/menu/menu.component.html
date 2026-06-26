@@ -1,5 +1,19 @@
 <body>
 
+  <div #meuModal class="modal fade" id="meuModalExemplo" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content" style="color: black;">
+        <div class="modal-header">
+          <h5 class="modal-title">FORD</h5>
+          <button type="button" class="fechar-modal btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          BOAS VINDAS!!!
+        </div>
+      </div>
+    </div>
+  </div>
+
   <div class="head">
     <img class="logo" src="img/ford-logo.png" alt="">
     <div class="btn-div">
@@ -13,11 +27,11 @@
   <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
     <div class="offcanvas-header">
       <h5 class="offcanvas-title" id="offcanvasExampleLabel"><img class="logo-dentro" src="img/ford-96.png" alt=""></h5>
-      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      <button type="button" class="btn-fechar btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>
     <div class="offcanvas-body">
       <button class="dashboard-btn" (click)="goToDashboard()">Dashboard</button>
-      <button (click)="Logout()" class="logout-btn">Sair</button>
+      <button (click)="logout()" class="logout-btn">Sair</button>
     </div>
     <div class="redes">
       <p>Redes Sociais</p>
