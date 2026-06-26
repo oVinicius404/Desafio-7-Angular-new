@@ -7,6 +7,7 @@
   height: 20vh;
   font-size: larger;
   font-family: "Montserrat", sans-serif;
+  border-radius: 10px;
 }
 
 .titulo {
@@ -16,6 +17,8 @@
   width: 100%;
   height: 40%;
   background-color: var(--cor_cinza_claro);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
 
 .valor {

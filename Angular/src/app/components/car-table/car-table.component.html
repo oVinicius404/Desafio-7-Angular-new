@@ -1,29 +1,33 @@
-<div class="tabelinha">
-    <table class="tabela-carros">
-        <thead>
-            <tr>
-                <th class="info-tabela">VIN</th>
-                <th class="info-tabela">ODOMETRO</th>
-                <th class="info-tabela">NÍVEL DO COMBUSTÍVEL</th>
-                <th class="info-tabela">STATUS</th>
-                <th class="info-tabela">LAT</th>
-                <th class="info-tabela">LONG</th>
-            </tr>
-        </thead>
-        <tbody class="valores-tabela">
-            <tr>
-                <td class="d-flex">
-                    <input class="vin" (change)="onChangeVin($event)" type="text" placeholder="{{ vin }}"
-                        value="{{ vin }}">
-                    <!-- <button  class="btn btn-primary"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="20" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16"><path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" /></svg>
-                    </button> -->
-                </td>
-                <td class="info-tabela">{{odometro}}Km</td>
-                <td class="info-tabela">{{nivelCombustivel}}%</td>
-                <td class="info-tabela">{{status}}</td>
-                <td class="info-tabela">{{lat}}</td>
-                <td class="info-tabela">{{long}}</td>
-            </tr>
-        </tbody>
-    </table>
-</div>
+<body>
+     
+    <div class="tabelinha">
+        <table class="tabela-carros">
+            <thead>
+                <tr>
+                    <th class="info-tabela">VIN</th>
+                    <th class="info-tabela">ODOMETRO</th>
+                    <th class="info-tabela">NÍVEL DO COMBUSTÍVEL</th>
+                    <th class="info-tabela">STATUS</th>
+                    <th class="info-tabela">LAT</th>
+                    <th class="info-tabela">LONG</th>
+                </tr>
+            </thead>
+            <tbody class="valores-tabela">
+                <tr>
+                    <td class="d-flex">
+                        <input class="vin" (change)="onChangeVin($event)" type="text" placeholder="{{ vin }}"
+                            value="{{ vin }}">
+                        <!-- <button  class="btn btn-primary"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="20" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16"><path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" /></svg>
+                        </button> -->
+                    </td>
+                    <td class="info-tabela">{{odometro}}Km</td>
+                    <td class="info-tabela">{{nivelCombustivel}}%</td>
+                    <td class="info-tabela">{{status}}</td>
+                    <td class="info-tabela">{{lat}}</td>
+                    <td class="info-tabela">{{long}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</body>
