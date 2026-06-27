@@ -8,7 +8,7 @@ body {
   max-height: 100%;
   width: 100vw;
   background: #FFFFFF;
-  background: linear-gradient(0deg, #ffffff 70%, #0c1f55 100%);
+  background: linear-gradient(0deg, #ffffff 65%, #0c1f55 100%);
   overflow-x: hidden;
   font-family: "Montserrat", sans-serif;
 }
@@ -18,42 +18,150 @@ body {
   gap: 12px;
 }
 
-.botoes {
+.head {
   display: flex;
-  flex-direction: row;
   width: 100%;
-  justify-content: center;
+  height: 10%;
   align-items: center;
-  gap: 30px;
-  margin-bottom: 1%;
 }
 
-.dashboard-btn {
-  border: 1px solid var(--cor_botoes);
+.logo {
+  display: flex;
+  justify-self: start;
+  width: 10%;
+  margin-left: 1%;
+}
+
+.btn-div {
+  width: 73.8%;
+  margin-left: 2%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid var(--cor_fundo);
+  padding: 1%;
+  border-radius: 7.5px;
+  background-color: var(--cor_cinza_claro);
+  color: var(--cor_margens);
+  font-size: 20px;
+  width: 15%;
+  height: 75%;
+  font-family: "Montserrat", sans-serif;
+  transition: 0.15s;
+}
+
+.menu-btn:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+  pointer-events: auto !important;
+}
+
+.offcanvas-header {
+  display: flex;
+  justify-content: center;
+}
+
+.logo-dentro {
+  display: flex;
+  width: 100%;
+}
+
+.btn-fechar {
+  margin-left: 30%;
+}
+
+.offcanvas-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.home-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--cor_fundo);
+  padding: 3%;
   border-radius: 7px;
   background-color: var(--cor_cinza_claro);
   color: var(--cor_margens);
   font-size: 20px;
-  width: 10%;
-  height: 100%;
+  width: 80%;
+  height: 10%;
+  font-family: "Montserrat", sans-serif;
+  margin-bottom: 4%;
   transition: 0.15s;
 }
 
-.dashboard-btn:hover {
+.home-btn:hover {
   cursor: pointer;
   transform: scale(1.05);
   pointer-events: auto !important;
 }
 
 .logout-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border: 1px solid var(--cor_sangue);
+  padding: 3%;
   border-radius: 7px;
   background-color: var(--cor_perigo);
   color: white;
   font-size: 20px;
-  width: 10%;
-  height: 100%;
+  width: 80%;
+  height: 8%;
+  font-family: "Montserrat", sans-serif;
   transition: 0.15s;
+}
+
+.logout-btn:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+  pointer-events: auto !important;
+}
+
+.offcanvas {
+  background: #142d73;
+  background: linear-gradient(0deg, #142d73 19%, #1962ff 100%);
+}
+
+
+.redes {
+  display: flex;
+  flex-direction: column;
+  font-size: 100%;
+  margin-bottom: 5%;
+}
+
+.redes p {
+  font-size: larger;
+  text-align: center;
+  align-self: center;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+}
+
+.social_img {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  gap: 3%;
+}
+
+.social_links {
+  width: 100%;
+}
+
+.social_links:hover {
+  transition: 0.15s;
+  transform: scale(1.03);
 }
 
 .tabela {
@@ -100,13 +208,104 @@ select {
   align-items: center;
   width: 100%;
   height: 100%;
-  max-height: 350px;
+  max-height: 320px;
   margin-top: 5%;
-  margin-bottom: 4%;
 }
 
 .carro-img {
   max-width: 100%;
   max-height: 100%;
   object-fit: contain;
+}
+
+.copyright {
+  padding-top: 1%;
+  padding-left: 3%;
+  display: flex;
+  font-size: 100%;
+  justify-content: center;
+  font-family: "Montserrat", sans-serif;
+  color: var(--cor_margens);
+  margin-bottom: 1%;
+}
+
+@media (max-width: 800px) {
+  body {
+    height: auto;
+    max-height: none;
+    padding: 20px 0;
+  }
+
+  .dashboard-tudo {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    width: 92%;
+    margin: 0 auto;
+  }
+
+  .head {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+  }
+
+  .logo {
+    width: 30%;
+    margin-left: 0;
+  }
+
+  .btn-div {
+    width: 100%;
+    margin-bottom: 2%;
+    display: flex;
+    align-items: start;
+  }
+
+  .menu-btn {
+    width: 30%;
+    padding: 10px 0;
+    font-size: 16px;
+    height: auto;
+  }
+
+  .offcanvas {
+    width: 75% !important;
+  }
+
+  .home-btn,
+  .logout-btn {
+    width: 90%;
+    font-size: 18px;
+  }
+
+  .tabela,
+  app-card {
+    width: 100% !important;
+    height: 120px !important;
+  }
+
+  select {
+    width: 80%;
+    font-size: 16px;
+  }
+
+  .botoes {
+    width: 92%;
+    gap: 15px;
+    margin-bottom: 7%;
+  }
+
+  .carro-div {
+    margin-top: 10%;
+    margin-bottom: 10%;
+    padding: 0 4%;
+  }
+
+  .copyright {
+    font-size: 16px;
+    text-align: center;
+    padding: 0 5% 5% 5%;
+  }
 }

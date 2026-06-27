@@ -35,7 +35,7 @@ export class DashboardComponent implements OnInit {
     long: 0,
   }
 
-    goToMenu() {
+    goToHome() {
     this.router.navigate(["/home"])
   }
 
