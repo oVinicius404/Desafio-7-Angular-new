@@ -127,10 +127,10 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid black;
+    border: 1px solid var(--cor_sangue);
     padding: 3%;
     border-radius: 7px;
-    background-color: #c70000;
+    background-color: var(--cor_perigo);
     color: white;
     font-size: 20px;
     width: 80%;

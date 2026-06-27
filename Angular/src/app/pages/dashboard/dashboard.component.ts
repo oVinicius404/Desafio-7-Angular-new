@@ -13,6 +13,7 @@ import { Router } from '@angular/router';
 })
 export class DashboardComponent implements OnInit {
   dashboardService = inject(DashboardService)
+  router = inject(Router);
 
   veiculos: Veiculo[] = []
   veiculoSelecionado: Veiculo = {
@@ -32,6 +33,15 @@ export class DashboardComponent implements OnInit {
     status: "--",
     lat: 0,
     long: 0,
+  }
+
+    goToMenu() {
+    this.router.navigate(["/home"])
+  }
+
+  logout() {
+    sessionStorage.clear()
+    this.router.navigate([""])
   }
 
   ngOnInit() {

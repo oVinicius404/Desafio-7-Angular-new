@@ -1,5 +1,10 @@
 <body>
     
+    <div class="botoes">
+        <button class="dashboard-btn" (click)="goToMenu()">Menu</button>
+        <button (click)="logout()" class="logout-btn">Sair</button>
+    </div>
+
     <section class="dashboard-tudo">
         <div class="tabela">
             <div class="veiculos">
@@ -9,7 +14,7 @@
                 <select (change)="onChangeSelect($event)">
                     @for (v of veiculos; track v.id) {
                         <option value="{{ v.id }}">{{ v.vehicle }}</option>
-                    }
+                    }   
                 </select>
             </div>
         </div>

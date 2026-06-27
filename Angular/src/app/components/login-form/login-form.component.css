@@ -34,17 +34,18 @@ body {
 
 .formulario {
     flex: 1;
-    max-width: 612px;
+    max-width: 600px;
 }
 
 .login-forms {
     display: flex;
-    background: var(--cor_cinza_clarinho);
+    background: #dbdbdb;
+    background: linear-gradient(0deg, #dbdbdb 40%, #f5f8ff 90%);
     width: 100%;
     height: 100%;
     flex-direction: column;
     box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.2);
-    padding: 60px;
+    padding: 40px 60px 60px;
     box-sizing: border-box;
 }
 
@@ -57,11 +58,10 @@ body {
     display: flex;
     align-self: center;
     width: 60%;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
 }
 
 h2 {
-    font-size: 30px;
     display: flex;
     justify-content: center;
     margin-bottom: 10%;

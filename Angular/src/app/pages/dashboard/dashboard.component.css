@@ -10,6 +10,7 @@ body {
   background: #FFFFFF;
   background: linear-gradient(0deg, #ffffff 70%, #0c1f55 100%);
   overflow-x: hidden;
+  font-family: "Montserrat", sans-serif;
 }
 
 .dashboard-tudo {
@@ -17,12 +18,50 @@ body {
   gap: 12px;
 }
 
+.botoes {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 1%;
+}
+
+.dashboard-btn {
+  border: 1px solid var(--cor_botoes);
+  border-radius: 7px;
+  background-color: var(--cor_cinza_claro);
+  color: var(--cor_margens);
+  font-size: 20px;
+  width: 10%;
+  height: 100%;
+  transition: 0.15s;
+}
+
+.dashboard-btn:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+  pointer-events: auto !important;
+}
+
+.logout-btn {
+  border: 1px solid var(--cor_sangue);
+  border-radius: 7px;
+  background-color: var(--cor_perigo);
+  color: white;
+  font-size: 20px;
+  width: 10%;
+  height: 100%;
+  transition: 0.15s;
+}
+
 .tabela {
   justify-content: center;
   border: 1px solid #000000;
   box-shadow: 1px 4px 6px -1px rgba(0, 0, 0, 0.5);
   background-color: white;
-  width: 15vw;
+  width: 20vw;
   height: 20vh;
   font-size: larger;
   font-family: "Montserrat", sans-serif;
@@ -50,6 +89,9 @@ body {
 
 select {
   border-radius: 5px;
+  font-size: 20px;
+  width: 50%;
+  height: 35%;
 }
 
 .carro-div {

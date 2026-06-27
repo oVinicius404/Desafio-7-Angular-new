@@ -1,0 +1,48 @@
+.tabelinha {
+    font-family: "Montserrat", sans-serif;  
+}
+
+.tabela-carros {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0;
+    table-layout: fixed;
+}
+
+.tabela-cabecalho th {
+    color: #ffffff !important;
+    background-color: var(--cor_margens) !important;
+    font-size: 14px;
+    padding: 15px 10px;
+    text-align: center;
+    width: 16.66%;
+    height: 7vh;
+    border-right: 1px solid var(--cor_fundo);
+}
+
+.tabela-cabecalho th:last-child {
+  border-right: none;
+}
+
+.valores-tabela td {
+  padding: 15px 10px;
+  text-align: center;
+  font-size: 14px;
+  background-color: #ffffff;
+  width: 16.66%; 
+  vertical-align: middle;
+}
+
+.valores-tabela td:last-child {
+  border-right: none;
+}
+
+.vin-input {
+  width: 90%;
+  max-width: 180px;
+  padding: 6px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  text-align: left;
+}
