@@ -14,7 +14,6 @@ declare var bootstrap: any;
 export class MenuComponent implements OnInit, OnDestroy, AfterViewInit {
   router = inject(Router);
 
-  // Captura a referência do modal colocada no HTML (#meuModal)
   @ViewChild('meuModal') modalElement!: ElementRef;
 
   goToDashboard() {
@@ -46,7 +45,6 @@ export class MenuComponent implements OnInit, OnDestroy, AfterViewInit {
     }, 3000);
   }
 
-  // Executa assim que a tela carrega totalmente, abrindo o modal
   ngAfterViewInit(): void {
     const modalBootstrap = new bootstrap.Modal(this.modalElement.nativeElement);
     modalBootstrap.show();
@@ -55,6 +53,15 @@ export class MenuComponent implements OnInit, OnDestroy, AfterViewInit {
   ngOnDestroy(): void {
     if (this.idIntervalo) {
       clearInterval(this.idIntervalo);
+    }
+
+    document.body.style.overflow = '';
+    document.body.style.paddingRight = '';
+    document.body.classList.remove('modal-open');
+
+    const backdrop = document.querySelector('.modal-backdrop');
+    if (backdrop) {
+      backdrop.remove();
     }
   }
 

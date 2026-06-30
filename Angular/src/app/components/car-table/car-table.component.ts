@@ -17,18 +17,25 @@ export class CarTableComponent {
 
   dashboardService = inject(DashboardService)
 
-  onChangeVin(event: Event) {
-    const vin = (event.target as HTMLInputElement).value
-    
-    this.dashboardService.getVinInfos(vin).subscribe({
-      error: () => {},
+  onChangeVin(event: Event): void {
+    const inputElement = event.target as HTMLInputElement;
+    this.vin = inputElement.value;
+  }
+
+  pesquisar(): void {
+    if (!this.vin) return;
+
+    this.dashboardService.getVinInfos(this.vin).subscribe({
+      error: () => { },
       next: (vinInfos) => {
-        this.odometro = vinInfos.odometro
-        this.nivelCombustivel = vinInfos.nivelCombustivel
-        this.status = vinInfos.status
-        this.lat = vinInfos.lat
-        this.long = vinInfos.long
+        console.log("Dados recebidos da API:", vinInfos);
+
+        this.odometro = vinInfos.odometro;
+        this.nivelCombustivel = vinInfos.nivelCombustivel;
+        this.status = vinInfos.status;
+        this.lat = vinInfos.lat;
+        this.long = vinInfos.long;
       }
-    })
+    });
   }
 }
