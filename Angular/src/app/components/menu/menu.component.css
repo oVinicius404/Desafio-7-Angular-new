@@ -5,7 +5,7 @@ body {
     align-items: center;
     height: 100vh;
     background: #0C1F55;
-    background: linear-gradient(0deg, #0c1f55 43%, #1351db 85%);
+    background: linear-gradient(0deg, #0c1f55 43%, #021744 85%);
 }
 
 .modal {
@@ -153,8 +153,8 @@ body {
 }
 
 .offcanvas {
-    background: #142d73;
-    background: linear-gradient(0deg, #142d73 19%, #1962ff 100%);
+    background: #002169;
+    background: linear-gradient(0deg, #001c58 19%, #163281 100%);
 }
 
 
