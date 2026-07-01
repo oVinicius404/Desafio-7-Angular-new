@@ -57,6 +57,13 @@
   border: 1px solid var(--cor_margens);
 }
 
+
+@media (max-width: 1400px) {
+  .vin-input{
+    width: 70%;
+  }
+}
+
 @media (max-width: 800px) {
   .tabelinha {
     width: 92%;

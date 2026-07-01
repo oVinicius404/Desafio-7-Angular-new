@@ -231,9 +231,18 @@ select {
 
 @media (max-width: 800px) {
   body {
-    height: auto;
-    max-height: none;
-    padding: 20px 0;
+    width: 100% !important;
+    /* Força o body a respeitar o limite real da tela */
+    margin: 0 !important;
+    /* Garante que nenhuma margem empurre o layout para o lado */
+    padding: 0 !important;
+    min-height: 100vh;
+    /* Permite que o fundo cresça se o conteúdo for longo */
+    height: auto !important;
+    /* Desativa o height fixo que quebrava o fundo */
+    max-height: none !important;
+    overflow-x: hidden;
+    /* Trava de segurança: mata qualquer scroll horizontal teimoso */
   }
 
   .dashboard-tudo {

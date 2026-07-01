@@ -9,7 +9,7 @@ body {
 }
 
 .modal {
-    opacity: 95%;
+    opacity: 80%;
 }
 
 .modal-header {
@@ -248,6 +248,14 @@ body {
     background-color: rgba(0, 0, 0, 0.8);
 }
 
+.carrossel-container-extra {
+    display: none;
+}
+
+.carrossel-container-extra2 {
+    display: none;
+}
+
 .copyright {
     padding-top: 1%;
     padding-left: 3%;
@@ -269,14 +277,13 @@ body {
 
     .logo {
         width: 35%;
-        justify-self: start;
-        margin-bottom: 20%;
+        margin-bottom: 10%;
         margin-left: 0;
     }
 
     .btn-div {
         width: 100%;
-        height: 15vh;
+        height: 10vh;
         display: flex;
         align-items: start;
     }
@@ -289,13 +296,143 @@ body {
     }
 
     .carrossel-container {
+        display: none !important;
+    }
+
+    .carrossel-container-extra {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
         width: 88%;
+        max-width: 1200px;
+        margin: 20px auto;
+        overflow: hidden;
+        min-height: 150px;
+    }
+
+    .carrossel-container-extra .btn-nav {
+        padding: 12px;
+        font-size: 16px;
+    }
+
+    .carrossel-trilho-extra {
+        display: flex;
+        width: 100%;
+        transition: transform 0.5s ease-in-out;
+    }
+
+    .carrossel-item-extra {
+        min-width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .img-carrossel-extra {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
         border-radius: 20px;
     }
 
-    .carrossel-container .btn-nav {
+    .btn-extra {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        border: none;
+        padding: 16px;
+        cursor: pointer;
+        font-size: 18px;
+        z-index: 10;
+        opacity: 0;
+        transition: opacity 0.3s ease, background-color 0.1s;
+    }
+
+    .btn-ant1 {
+        left: 0;
+    }
+
+    .btn-prox1 {
+        right: 0;
+    }
+
+    .carrossel-container-extra:hover .btn-extra {
+        opacity: 1;
+    }
+
+    .btn-extra:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    .carrossel-container-extra2 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        width: 88%;
+        max-width: 1200px;
+        margin: 20px auto;
+        overflow: hidden;
+        min-height: 200px;
+    }
+
+    .carrossel-container-extra2 .btn-nav {
         padding: 12px;
         font-size: 16px;
+    }
+
+    .carrossel-trilho-extra2 {
+        display: flex;
+        width: 100%;
+        transition: transform 0.5s ease-in-out;
+    }
+
+    .carrossel-item-extra2 {
+        min-width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .img-carrossel-extra2 {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        border-radius: 20px;
+    }
+
+    .btn-extra2 {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        border: none;
+        padding: 16px;
+        cursor: pointer;
+        font-size: 18px;
+        z-index: 10;
+        opacity: 0;
+        transition: opacity 0.3s ease, background-color 0.1s;
+    }
+
+    .btn-ant2 {
+        left: 0;
+    }
+
+    .btn-prox2 {
+        right: 0;
+    }
+
+    .carrossel-container-extra2:hover .btn-extra2 {
+        opacity: 1;
+    }
+
+    .btn-extra2:hover {
+        background-color: rgba(0, 0, 0, 0.8);
     }
 
     .offcanvas {
@@ -311,8 +448,8 @@ body {
     .copyright {
         font-size: 16px;
         text-align: center;
-        padding: 0 5% 5% 5%;
-        height: 15vh;
+        padding: 5% 5% 5% 5%;
+        height: 10vh;
     }
 
 }
