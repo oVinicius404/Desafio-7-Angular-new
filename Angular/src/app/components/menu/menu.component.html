@@ -73,18 +73,19 @@
     <button type="button" class="btn-extra btn-prox1" (click)="proximo1()">&#10095;</button>
   </div>
 
-<div class="carrossel-container-extra2">
-  
-  <div class="carrossel-trilho-extra" [ngStyle]="{'transform': 'translateX(' + (-indexAtual2 * 100) + '%)'}">
-    
-    <div class="carrossel-item-extra" *ngFor="let img2 of imagens2">
-      <img [src]="img2" class="img-carrossel-extra" alt="Slide Ford">
+  <!-- carrossel terciário responsivo -->
+  <div class="carrossel-container-extra2">
+
+    <div class="carrossel-trilho-extra" [ngStyle]="{'transform': 'translateX(' + (-indexAtual2 * 100) + '%)'}">
+
+      <div class="carrossel-item-extra" *ngFor="let img2 of imagens2">
+        <img [src]="img2" class="img-carrossel-extra" alt="Slide Ford">
+      </div>
     </div>
+
+    <button type="button" class="btn-extra2 btn-ant2" (click)="anterior2()">&#10094;</button>
+    <button type="button" class="btn-extra2 btn-prox2" (click)="proximo2()">&#10095;</button>
   </div>
-  
-  <button type="button" class="btn-extra2 btn-ant2" (click)="anterior2()">&#10094;</button>
-  <button type="button" class="btn-extra2 btn-prox2" (click)="proximo2()">&#10095;</button>
-</div>
 
   <div class="copyright">
     <P>&copy; 2026 Ford Brasil | Viva o Novo. Todos os direitos reservados.</P>

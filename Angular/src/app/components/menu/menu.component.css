@@ -266,6 +266,12 @@ body {
     color: white;
 }
 
+@media (max-width: 1250px) { 
+    .carrossel-container {
+        width: 90%;
+    }
+}
+
 @media (max-width: 800px) {
 
     .head {
@@ -305,7 +311,7 @@ body {
         justify-content: center;
         align-items: center;
         position: relative;
-        width: 88%;
+        width: 60%;
         max-width: 1200px;
         margin: 20px auto;
         overflow: hidden;
@@ -373,7 +379,7 @@ body {
         justify-content: center;
         align-items: center;
         position: relative;
-        width: 88%;
+        width: 60%;
         max-width: 1200px;
         margin: 20px auto;
         overflow: hidden;
@@ -452,4 +458,12 @@ body {
         height: 10vh;
     }
 
+}
+
+@media (max-width: 500px) {
+
+    .carrossel-container-extra,
+    .carrossel-container-extra2 {
+        width: 88%;
+    }
 }
